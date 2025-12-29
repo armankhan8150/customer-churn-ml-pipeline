@@ -49,9 +49,16 @@ Models are evaluated using several metrics:
 - **Classification Report** (Precision, Recall, F1-Score)
 - **Confusion Matrix** (to visualize True/False Positives and Negatives)
 - **ROC Curve & AUC Score**
+  
+#### Model Performance Visuals
+![Confusion Matrix and ROC Curve](assets/model_performance.png)
 
 ### 5. Model Deployment Readiness
 The entire pipeline—including the preprocessor and the trained model—is saved as a single `churn_model_pipeline.pkl` file using `joblib`. This allows for easy deployment in a production environment without needing to re-run preprocessing steps manually on new data.
+
+## Key Insights
+Based on the Random Forest model, the top drivers for churn are:
+![Feature Importance Plot](assets/feature_importance.png)
 
 ## Key Takeaways
 - **Clean Workflow:** Pipelines ensure that training and transformation steps are bundled together.
